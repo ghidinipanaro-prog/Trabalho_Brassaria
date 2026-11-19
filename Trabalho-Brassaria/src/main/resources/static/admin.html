@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#3B1370">
+  <title>Administração | Brassaria 780 anos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/brassaria.css?v=3">
+</head>
+<body data-page="admin" class="">
+  <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+  <div id="cabecalho"></div>
+  <main id="conteudo">
+<section class="pagina-topo"><span class="bolha b1"></span><span class="bolha b2"></span>
+  <div class="wrap"><span class="eyebrow"> Área do administrador</span><h1>Painel de cadastro</h1><p>Gerencie os eventos e as bebidas exibidos no site.</p><div class="btns"><a class="btn btn-sec" href="index.html">Ver o site</a><button class="btn" type="button" id="btn-sair">Sair</button></div></div></section>
+<section class="secao"><div class="wrap">
+  <div class="abas" role="tablist" aria-label="Áreas de cadastro">
+    <button class="aba" role="tab" id="aba-eventos" aria-controls="painel-eventos" aria-selected="true" data-aba="eventos"> Eventos</button>
+    <button class="aba" role="tab" id="aba-bebidas" aria-controls="painel-bebidas" aria-selected="false" data-aba="bebidas">Bebidas</button>
+  </div>
+  <div id="painel-eventos" class="admin-grid" role="tabpanel" aria-labelledby="aba-eventos">
+    <div><h2>Novo evento</h2>
+    <form id="form-evento">
+      <label for="titulo">Título</label><input type="text" id="titulo" maxlength="120" required>
+      <label for="descricao">Descrição</label><textarea id="descricao" rows="4" maxlength="2000" required></textarea>
+      <label for="dataEvento">Data do evento</label><input type="date" id="dataEvento" required>
+      <button type="submit">Cadastrar evento</button><p id="mensagem" role="status"></p>
+    </form></div>
+    <div><h2>Eventos cadastrados</h2><div id="lista-admin"></div></div>
+  </div>
+  <div id="painel-bebidas" class="admin-grid" role="tabpanel" aria-labelledby="aba-bebidas" hidden>
+    <div><h2>Nova bebida</h2>
+    <form id="form-bebida">
+      <label for="nomeBebida">Nome da bebida</label><input type="text" id="nomeBebida" maxlength="80" required>
+      <label for="categoriaBebida">Categoria</label><select id="categoriaBebida" required></select>
+      <button type="button" class="btn-link" id="btn-nova-cat">+ Cadastrar nova categoria</button>
+      <div id="bloco-cat" hidden><label for="nomeCategoria">Nome da nova categoria</label>
+        <div class="linha-cat"><input type="text" id="nomeCategoria" maxlength="80"><button type="button" id="btn-salvar-cat">Adicionar</button></div></div>
+      <button type="submit">Cadastrar bebida</button><p id="mensagem-bebida" role="status"></p>
+    </form></div>
+    <div><h2>Bebidas cadastradas</h2><div id="lista-bebidas"></div></div>
+  </div>
+</div></section>
+  </main>
+  <div id="rodape"></div>
+  <script src="js/layout.js?v=3"></script><script src="js/admin.js?v=3"></script>
+</body>
+</html>

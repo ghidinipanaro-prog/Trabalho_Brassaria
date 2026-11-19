@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#3B1370">
+  <title>Entrar | Brassaria 780 anos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/brassaria.css?v=3">
+</head>
+<body data-page="login" class="">
+  <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+  <div id="cabecalho"></div>
+  <main id="conteudo">
+<section class="pagina-topo"><span class="bolha b1"></span><span class="bolha b2"></span>
+  <div class="wrap"><span class="eyebrow"> Acesso restrito</span><h1>Área do administrador</h1><p>Entre para cadastrar eventos e bebidas.</p></div></section>
+<section class="secao"><div class="wrap"><form class="login" action="/login" method="post">
+  <h2>Entrar</h2><p id="erro-login" class="msg-erro" role="alert" hidden>Usuário ou senha incorretos.</p>
+  <label for="username">Usuário</label><input type="text" id="username" name="username" autocomplete="username" required>
+  <label for="password">Senha</label><input type="password" id="password" name="password" autocomplete="current-password" required>
+  <button type="submit">Entrar</button></form></div></section>
+<script>if(location.search.includes("erro"))document.getElementById("erro-login").hidden=false;</script>
+  </main>
+  <div id="rodape"></div>
+  <script src="js/layout.js?v=3"></script>
+</body>
+</html>
